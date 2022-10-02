@@ -1,13 +1,7 @@
-<a href="https://microbadger.com/images/dnsforge/xteve" title="Get your own image badge on microbadger.com"><img src="https://images.microbadger.com/badges/image/dnsforge/xteve.svg"></a>
-<a href="https://microbadger.com/images/dnsforge/xteve" title="Get your own version badge on microbadger.com"><img src="https://images.microbadger.com/badges/version/dnsforge/xteve.svg"></a>
-<a href="https://microbadger.com/images/dnsforge/xteve" title="Get your own commit badge on microbadger.com"><img src="https://images.microbadger.com/badges/commit/dnsforge/xteve.svg"></a>
-
-<br>
-
 <br>
 
 <h1 id="xTeVe><a href="https://xteve.de/">xTeVe Docker Edition</a></h1>
-<a href="https://xteve.de"><p><b>Recommended by xteve.de</b></p></a>
+<a href="https://github.com/xteve-project/xTeVe"><p><b>Recommended by xTeVe</b></p></a>
 <tr>
 
 Image Maintainer:  <b>LeeD </b>\<hostmaster@dnsforge.com\></a>
@@ -16,27 +10,7 @@ Image Maintainer:  <b>LeeD </b>\<hostmaster@dnsforge.com\></a>
 
 For support click <b>below</b> to visit our xTeVe <b>Discord</b> server:
 
-<a href="https://discord.gg/Up4ZsV6"><img alt="Discord" src="https://img.shields.io/discord/465222357754314767?color=%2367E3FB&style=for-the-badge">
-
-<br>
-
-<br>
-
-<p> <b> ** ATTENTION GUIDE2GO USERS !!! ** </b> </p>
-<p> <b> The Guide2go configuration format has changed from JSON to YAML as of xTeVe DE release <b>v1.0.5.</b>  Please reconfigure your lineups as follows: </b></p>
-
-<br>
-
-<p><B>From a "root" command prompt:</b></p>
-
-
-<p><b>guide2conf</b> <b>--username</b> < username > <b>--password</b> < password ><b> --name</b> < lineup_name > </p>
-
-<br>
-
-<p><b> This tool will run your lineup and give you the option of automatically adding a cron job for automated daily downloads.</b></p>
-
-<br>
+<a href="https://discord.gg/Up4ZsV6"><img alt="Discord" src="https://img.shields.io/discord/465222357754314767?color=%2367E3FB&style=for-the-badge"></a>
 
 <br>
 
@@ -53,9 +27,9 @@ xTeVe is a M3U proxy server for Plex, Emby and any client and provider which sup
 <br>
 
 <ul>
-<li>xTeVe v2.1 (Linux) x86 64 bit</li>
+<li>xTeVe 2.2.x (Linux) x86 64 bit</li>
 <li>Latest Guide2go (Linux) x86 64 bit  (Schedules Direct XMLTV grabber)</li>
-<li>Zap2XML Support  (Perl based zap2it / TVguide.com XMLTV grabber)</li>
+<li>Zap2XML Support  (Perl based zap2it XMLTV grabber)</li>
 <li>Bash, Perl & crond Support</li>
 <li>VLC & ffmpeg Support</li>
 <li>Automated XMLTV Guide Lineups & Cron’s</li>
@@ -339,7 +313,7 @@ You can now use the new <b>guide2conf</b> command line utility to automatically 
 <h2 id="Additional Guide2go Lineups">Additional Guide2go Lineups</h2>
 
 You can have up to (4) separate guide2go lineups with one SD subscription.  If you choose to create additional lineups we recommend you create separate guide2go
-configuration  (YAML) files for each one.  Follow the following steps to create additional lineups and crons.
+configuration  (YAML) files for each one.  We also recommend staggering the lineup cron times, as Schedules Direct does limit how many concurrent connections you can have to their API at any one time. Follow the following steps to create additional lineups and crons.
 
 <br>
 
