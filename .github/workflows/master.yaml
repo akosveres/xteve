@@ -32,6 +32,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/arm64
           push: true
-          tags: ghcr.io/akosveres/xteve:latest
+          tags: ghcr.io/akosveres/xteve-arm64:latest

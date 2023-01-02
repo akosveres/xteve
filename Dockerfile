@@ -33,7 +33,7 @@ ENV XTEVE_LOG=/var/log/xteve.log
 ENV XTEVE_BRANCH=master
 ENV XTEVE_DEBUG=0
 ENV XTEVE_API=1
-ENV XTEVE_URL=https://github.com/xteve-project/xTeVe-Downloads/blob/master/xteve_linux_amd64.tar.gz?raw=true
+ENV XTEVE_URL=https://github.com/xteve-project/xTeVe-Downloads/blob/master/xteve_linux_arm64.tar.gz?raw=true
 ENV XTEVE_VERSION=1.0.9
 ENV GUIDE2GO_HOME=/home/xteve/guide2go
 ENV GUIDE2GO_CONF=/home/xteve/guide2go/conf
