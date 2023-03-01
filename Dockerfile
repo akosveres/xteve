@@ -73,8 +73,8 @@ perl-digest-sha1
 
 # Pull the required binaries for xTeVe, Guide2go and Zap2XML from the repos.
 ADD /bin/xteve_starter.pl $XTEVE_BIN/xteve_starter.pl
-RUN wget $XTEVE_URL -O xteve_linux_arm64.tar.gz \
-&& tar zxfvp xteve_linux_amd64.tar.gz -C $XTEVE_BIN && rm -f $XTEVE_HOME/xteve_linux_arm64.tar.gz
+RUN wget $XTEVE_URL -O xteve_linux_amd64.tar.gz \
+&& tar zxfvp xteve_linux_amd64.tar.gz -C $XTEVE_BIN && rm -f $XTEVE_HOME/xteve_linux_amd64.tar.gz
 ADD /bin/guide2go-arm64 $XTEVE_BIN/guide2go
 ADD /bin/guide2conf $XTEVE_BIN/guide2conf
 ADD /bin/m3uFilter.sh $XTEVE_BIN/m3uFilter.sh
