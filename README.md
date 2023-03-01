@@ -8,6 +8,14 @@ Image Maintainer:  <b>LeeD </b>\<hostmaster@dnsforge.com\></a>
 
 <br>
 
+<h2>Buy us a Frosty Beverage!!</h2><a href="https://www.paypal.com/donate/?hosted_button_id=9YFANKSM3FW58"><img src="https://raw.githubusercontent.com/xteve-repo/images/master/dnsforge_QR.png"></a>
+
+<p><b>If you enjoy our docker image and would like to buy us a beer, well.. we're not going to stop you!! <a href="https://www.paypal.com/donate/?hosted_button_id=9YFANKSM3FW58"><b>click here</b></b></p>
+
+<br>
+
+<br>
+
 For support click <b>below</b> to visit our xTeVe <b>Discord</b> server:
 
 <a href="https://discord.gg/Up4ZsV6"><img alt="Discord" src="https://img.shields.io/discord/465222357754314767?color=%2367E3FB&style=for-the-badge"></a>
@@ -23,18 +31,6 @@ xTeVe is a M3U proxy server for Plex, Emby and any client and provider which sup
 <p>xTeVe emulates a SiliconDust HDHomeRun OTA tuner, which allows it to expose IPTV style channels to software, which would not normally support it.  This Docker image includes the following packages and features:
 
 <br>
-
-<br>
-
-<ul>
-<li>xTeVe 2.2.x (Linux) x86 64 bit</li>
-<li>Latest Guide2go (Linux) x86 64 bit  (Schedules Direct XMLTV grabber)</li>
-<li>Zap2XML Support  (Perl based zap2it XMLTV grabber)</li>
-<li>Bash, Perl & crond Support</li>
-<li>VLC & ffmpeg Support</li>
-<li>Automated XMLTV Guide Lineups & Cron’s</li>
-<li>Runs as  unprivileged user</li>
-</ul>
 
 <br>
 
@@ -193,6 +189,14 @@ This container is configured with the following default environmental variables,
 <tr>
 <td>-e XTEVE_API=0</td>
 <td>Enable/Disable API [ beta ] Default: 1=ON</td>
+</tr>
+<tr>
+<td>-e GUIDE2GO_SERVER_HOST=10.0.0.1</td>
+<td>Guide2go Token server [ host | ip ] </td>
+</tr>
+<tr>
+<td>-e GUIDE2GO_SERVER_PORT=31337</td>
+<td>Guide2go Token port [ port ] </td>
 </tr>
 <tr>
 <td>-v</td>
@@ -365,7 +369,7 @@ The YAML file will now be written to <b>$GUIDE2GO_CONF/< lineup_name >.yaml</b>
 
 <h2 id="zap2XML Crontab">zap2XML Crontab</h2>
 
-To create an automated lineup and cron to run the zap2XML configuration on a daily basis, you will need to sign up for a free <a href="https://tvlistings.zap2it.com">Zap2it</a> account.  You can then create the crontab using either the <b>guide2conf</b> utility or manually create the crontab by running the  <b>'crontab -e -u xteve'</b> command from a command prompt inside the container. You will need to add the zap2XML XMLTV file located in <b>$XTEVE_CONF/data/zap2xml.xml</b>  to <b>xTeVe->XMLTV</b> once it has been generated on the first run.
+To create an automated lineup and cron to run the zap2XML configuration on a daily basis, you will need to sign up for a free <a href="https://tvlistings.zap2it.com">Zap2it</a> account.  You can then create the crontab using either the <b>guide2conf</b> utility or manually create the crontab by running the  <b>'crontab -e -u xteve'</b> command from a command prompt inside the container. You will need to add the zap2XML XMLTV file located in <b>$XTEVE_CONF/data/< lineup_name >.xml</b>  to <b>xTeVe->XMLTV</b> once it has been generated on the first run.
 
 <br>
 
@@ -380,22 +384,8 @@ To create an automated lineup and cron to run the zap2XML configuration on a dai
 $XTEVE_CONF/data/< lineup_name >.xml</b></p>
 
 <br>
-
-<h2 id="zap2XML Crontab">zap2XML TVGuide Crontab</h2>
-
-To create an automated lineup and cron to run the TVGuide.com configuration on a daily basis, you will need to sign up for a free TVGuide.com account. You can then create the crontab using either the <b>guide2conf</b> utility or manually create the crontab by running the <b>'crontab -e -u xteve'</b> command from a command prompt inside the container. You will need to add the zap2XML XMLTV file located in <b>$XTEVE_CONF/data/tvguide.xml</b> to <b>xTeVe->XMLTV</b> once it has been generated on the first run.
-
-<br>
-
-<p><b>guide2conf</b> <b>--username</b> < username@domain.com > <b>--password</b> < password ><b> --max-days</b> < max_days [1-14] > <b>--name</b> < lineup_name > </p>
-
-<br>
-
-<p><b>Manual crontab configuration:</b></p>
-
-<p><b># Run TVGuide crontab daily at 1:15 AM EST</b></p>
-<p><b>15  1  *  *  * /home/xteve/bin/zap2xml.pl -z -u username@domain.com -p ******** -U -c $XTEVE_CACHE/tvguide/< lineup_name > -o $XTEVE_CONF/data/< lineup_name >.xml</b></p>
-
+<p><b>NOTE: Support for the tvguide.com service is no longer available as the service was discontinued. </b></p>
 <br>
 
 Enjoy!
+
